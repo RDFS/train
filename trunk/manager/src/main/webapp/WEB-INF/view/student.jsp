@@ -20,111 +20,183 @@
         'Ext.tip.QuickTipManager'
     ]);
     Ext.onReady(function () {
-        var required = '<span style="color:red;font-weight:bold" data-qtip="Required">*</span>', addWindow;
+        var required = '<span style="color:red;font-weight:bold" data-qtip="Required">*</span>', addWindow, form;
 
         Ext.tip.QuickTipManager.init();
+
         function showContactForm() {
-            if (!addWindow) {
-                var form = Ext.widget('form', {
-                    layout: {
-                        type: 'vbox',
-                        align: 'stretch'
-                    },
-                    border: false,
-                    bodyPadding: 10,
+            Ext.Ajax.request({
+                url: "/uuid.do",
+                method: "GET",
+                success: function (response, options) {
+                    var json = Ext.JSON.decode(response.responseText);
+                    if (!addWindow) {
+                        form = Ext.widget('form', {
+                            layout: {
+                                type: 'vbox',
+                                align: 'stretch'
+                            },
+                            border: false,
+                            bodyPadding: 10,
 
-                    fieldDefaults: {
-                        labelAlign: 'top',
-                        labelWidth: 100,
-                        labelStyle: 'font-weight:bold'
-                    },
-                    items: [{
-                        xtype: 'fieldcontainer',
-                        fieldLabel: 'Your Name',
-                        labelStyle: 'font-weight:bold;padding:0;',
-                        layout: 'hbox',
-                        defaultType: 'textfield',
+                            fieldDefaults: {
+                                labelAlign: 'top',
+                                labelWidth: 100,
+                                labelStyle: 'font-weight:bold'
+                            },
+                            items: [{
+                                xtype: 'fieldcontainer',
+                                layout: 'hbox',
+                                defaultType: 'textfield',
 
-                        fieldDefaults: {
-                            labelAlign: 'top'
-                        },
+                                fieldDefaults: {
+                                    labelAlign: 'top'
+                                },
 
-                        items: [{
-                            flex: 1,
-                            name: 'firstName',
-                            itemId: 'firstName',
-                            afterLabelTextTpl: required,
-                            fieldLabel: 'First',
-                            allowBlank: false
-                        }, {
-                            width: 30,
-                            name: 'middleInitial',
-                            fieldLabel: 'MI',
-                            margins: '0 0 0 5'
-                        }, {
-                            flex: 2,
-                            name: 'lastName',
-                            afterLabelTextTpl: required,
-                            fieldLabel: 'Last',
-                            allowBlank: false,
-                            margins: '0 0 0 5'
-                        }]
-                    }, {
-                        xtype: 'textfield',
-                        fieldLabel: 'Your Email Address',
-                        afterLabelTextTpl: required,
-                        vtype: 'email',
-                        allowBlank: false
-                    }, {
-                        xtype: 'textfield',
-                        fieldLabel: 'Subject',
-                        afterLabelTextTpl: required,
-                        allowBlank: false
-                    }, {
-                        xtype: 'textareafield',
-                        fieldLabel: 'Message',
-                        labelAlign: 'top',
-                        flex: 1,
-                        margins: '0',
-                        afterLabelTextTpl: required,
-                        allowBlank: false
-                    }],
+                                items: [{
+                                    flex: 3,
+                                    name: 'sId',
+                                    itemId: "sId",
+                                    afterLabelTextTpl: required,
+                                    fieldLabel: 'ID',
+                                    allowBlank: false,
+                                    readOnly: true
+                                },
+                                    {
+                                        flex: 2,
+                                        name: 'sName',
+                                        afterLabelTextTpl: required,
+                                        fieldLabel: '姓名',
+                                        allowBlank: false,
+                                        margins: '0 0 0 5'
+                                    }
+                                ]
+                            },
+                                {
+                                    xtype: "fieldcontainer",
+                                    layout: 'hbox',
 
-                    buttons: [{
-                        text: 'Cancel',
-                        handler: function () {
-                            this.up('form').getForm().reset();
-                            this.up('window').hide();
-                        }
-                    }, {
-                        text: 'Send',
-                        handler: function () {
-                            if (this.up('form').getForm().isValid()) {
-                                // In a real application, this would submit the form to the configured url
-                                // this.up('form').getForm().submit();
-                                this.up('form').getForm().reset();
-                                this.up('window').hide();
-                                Ext.MessageBox.alert('Thank you!', 'Your inquiry has been sent. We will respond as soon as possible.');
-                            }
-                        }
-                    }]
-                });
+                                    fieldDefaults: {
+                                        labelAlign: 'top'
+                                    }
+                                    ,
+                                    items: [{
+                                        flex: 1,
+                                        xtype: 'combobox',
+                                        fieldLabel: '性别',
+                                        queryMode: 'local',
+                                        displayField: 'nSex',
+                                        allowBlank: false
+                                    }, {
+                                        flex: 2,
+                                        xtype: 'combobox',
+                                        fieldLabel: '学校',
+                                        queryMode: 'local',
+                                        displayField: 'nSchoolNo',
+                                        margins: '0 0 0 5',
+                                        allowBlank: false
+                                    }]
+                                }
+                                ,
+                                {
+                                    xtype: "fieldcontainer",
+                                    layout: 'hbox',
 
-                addWindow = Ext.widget('window', {
-                    title: 'Contact Us',
-                    closeAction: 'hide',
-                    width: 400,
-                    height: 400,
-                    minWidth: 300,
-                    minHeight: 300,
-                    layout: 'fit',
-                    resizable: true,
-                    modal: true,
-                    items: form,
-                    defaultFocus: 'firstName'
-                });
-            }
-            addWindow.show();
+                                    fieldDefaults: {
+                                        labelAlign: 'top'
+                                    }
+                                    ,
+                                    items: [{
+                                        flex: 1,
+                                        xtype: 'textfield',
+                                        fieldLabel: '邮箱',
+                                        afterLabelTextTpl: required,
+                                        vtype: 'email',
+                                        allowBlank: false
+                                    }, {
+                                        flex: 1,
+                                        xtype: 'textfield',
+                                        fieldLabel: '微信',
+                                        afterLabelTextTpl: required,
+                                        allowBlank: false,
+                                        margins: '0 0 0 5'
+                                    }, {
+                                        flex: 1,
+                                        xtype: 'textfield',
+                                        fieldLabel: 'QQ',
+                                        afterLabelTextTpl: required,
+                                        allowBlank: false,
+                                        margins: '0 0 0 5'
+                                    }]
+                                }
+                                ,
+                                {
+                                    xtype: 'combobox',
+                                    fieldLabel: '班级',
+                                    queryMode: 'local',
+                                    displayField: 'nSchoolNo',
+                                    allowBlank: false
+                                }
+                                ,
+                                {
+                                    xtype: 'textfield',
+                                    fieldLabel: '电话',
+                                    afterLabelTextTpl: required,
+                                    allowBlank: false,
+                                }
+                                ,
+                                {
+                                    xtype: 'textareafield',
+                                    fieldLabel: '备注',
+                                    labelAlign: 'top',
+                                    flex: 1,
+                                    margins: '0',
+                                    afterLabelTextTpl: required,
+                                    allowBlank: true
+                                }
+                            ],
+                            buttons: [{
+                                text: '取消',
+                                handler: function () {
+                                    this.up('form').getForm().reset();
+                                    this.up('window').hide();
+                                }
+                            }, {
+                                text: '提交',
+                                handler: function () {
+                                    if (this.up('form').getForm().isValid()) {
+                                        // In a real application, this would submit the form to the configured url
+                                        // this.up('form').getForm().submit();
+                                        this.up('form').getForm().reset();
+                                        this.up('window').hide();
+                                        Ext.MessageBox.alert('Thank you!', 'Your inquiry has been sent. We will respond as soon as possible.');
+                                    }
+                                }
+                            }]
+                        })
+                        ;
+
+                        addWindow = Ext.widget('window', {
+                            title: '编辑',
+                            closeAction: 'hide',
+                            width: 400,
+                            height: 450,
+                            minWidth: 300,
+                            minHeight: 300,
+                            layout: 'fit',
+                            resizable: true,
+                            modal: true,
+                            items: form,
+                            defaultFocus: 'sId'
+                        });
+                    }
+                    form.getForm().findField("sId").setValue(json.uuid);
+                    addWindow.show();
+                },
+                failure: function (response, options) {
+
+                }
+            });
         }
 
         Ext.define("manager.model.Student", {
@@ -158,7 +230,8 @@
             }
         });
 
-        var grid = Ext.create("Ext.grid.Panel", {
+        var grid;
+        grid = Ext.create("Ext.grid.Panel", {
             xtype: "grid",
             title: "学员基础信息 - 管理",
             store: store,
@@ -191,15 +264,21 @@
                 handler: function () {
                     showContactForm();
                 }
-            }, {
-                xtype: "button",
-                text: "编辑学员"
             }, "-", {
                 xtype: "button",
                 text: "删除选中项"
+            }, "->", {
+                xtype: "label",
+                text: '* 双击选中，进行编辑',
+                style: {
+                    color: "red", font: "normal 10px courier !important"
+                }
             }],
-            bbar: {xtype: "pagingtoolbar", store: store, displayInfo: true}
-        });
+            bbar: {
+                xtype: "pagingtoolbar", store: store, displayInfo: true
+            }
+        })
+        ;
     });
 </script>
 </body>

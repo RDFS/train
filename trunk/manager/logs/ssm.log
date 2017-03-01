@@ -432,3 +432,95 @@
 [INFO] [2017-02-28 23:11:55][org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
 [INFO] [2017-02-28 23:11:55][org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
 [INFO] [2017-02-28 23:11:55][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 667 ms
+[INFO] [2017-03-01 13:39:22][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2017-03-01 13:39:22][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Wed Mar 01 13:39:22 CST 2017]; root of context hierarchy
+[INFO] [2017-03-01 13:39:22][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO] [2017-03-01 13:39:22][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2017-03-01 13:39:22][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2017-03-01 13:39:23][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 559 ms
+[INFO] [2017-03-01 13:39:23][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2017-03-01 13:39:23][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Mar 01 13:39:23 CST 2017]; parent: Root WebApplicationContext
+[INFO] [2017-03-01 13:39:23][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2017-03-01 13:39:23][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2017-03-01 13:39:23][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/login.do]}" onto public java.lang.String org.school.manager.controller.HomeController.Login()
+[INFO] [2017-03-01 13:39:23][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/]}" onto public java.lang.String org.school.manager.controller.HomeController.Index()
+[INFO] [2017-03-01 13:39:23][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/student.do]}" onto public java.lang.String org.school.manager.controller.StudentInformationManagerController.Student()
+[INFO] [2017-03-01 13:39:23][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Mar 01 13:39:23 CST 2017]; parent: Root WebApplicationContext
+[INFO] [2017-03-01 13:39:23][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Mar 01 13:39:23 CST 2017]; parent: Root WebApplicationContext
+[INFO] [2017-03-01 13:39:23][org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[INFO] [2017-03-01 13:39:23][org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[INFO] [2017-03-01 13:39:23][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 586 ms
+[INFO] [2017-03-01 13:40:39][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2017-03-01 13:40:39][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Wed Mar 01 13:40:39 CST 2017]; root of context hierarchy
+[INFO] [2017-03-01 13:40:39][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO] [2017-03-01 13:40:39][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2017-03-01 13:40:39][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2017-03-01 13:40:39][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 550 ms
+[INFO] [2017-03-01 13:40:39][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2017-03-01 13:40:39][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Mar 01 13:40:39 CST 2017]; parent: Root WebApplicationContext
+[INFO] [2017-03-01 13:40:39][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2017-03-01 13:40:39][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2017-03-01 13:40:39][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/]}" onto public java.lang.String org.school.manager.controller.HomeController.Index()
+[INFO] [2017-03-01 13:40:39][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/login.do]}" onto public java.lang.String org.school.manager.controller.HomeController.Login()
+[INFO] [2017-03-01 13:40:39][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/student/index.do]}" onto public java.lang.String org.school.manager.controller.StudentInformationManagerController.Student()
+[INFO] [2017-03-01 13:40:40][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Mar 01 13:40:39 CST 2017]; parent: Root WebApplicationContext
+[INFO] [2017-03-01 13:40:40][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Mar 01 13:40:39 CST 2017]; parent: Root WebApplicationContext
+[INFO] [2017-03-01 13:40:40][org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[INFO] [2017-03-01 13:40:40][org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[INFO] [2017-03-01 13:40:40][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 463 ms
+[INFO] [2017-03-01 13:40:57][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2017-03-01 13:40:57][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Wed Mar 01 13:40:57 CST 2017]; root of context hierarchy
+[INFO] [2017-03-01 13:40:57][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO] [2017-03-01 13:40:57][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2017-03-01 13:40:57][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2017-03-01 13:40:57][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 547 ms
+[INFO] [2017-03-01 13:40:57][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2017-03-01 13:40:57][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Mar 01 13:40:57 CST 2017]; parent: Root WebApplicationContext
+[INFO] [2017-03-01 13:40:57][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2017-03-01 13:40:57][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2017-03-01 13:40:58][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/login.do]}" onto public java.lang.String org.school.manager.controller.HomeController.Login()
+[INFO] [2017-03-01 13:40:58][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/]}" onto public java.lang.String org.school.manager.controller.HomeController.Index()
+[INFO] [2017-03-01 13:40:58][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/student/index.do]}" onto public java.lang.String org.school.manager.controller.StudentInformationManagerController.Student()
+[INFO] [2017-03-01 13:40:58][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Mar 01 13:40:57 CST 2017]; parent: Root WebApplicationContext
+[INFO] [2017-03-01 13:40:58][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Mar 01 13:40:57 CST 2017]; parent: Root WebApplicationContext
+[INFO] [2017-03-01 13:40:58][org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[INFO] [2017-03-01 13:40:58][org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[INFO] [2017-03-01 13:40:58][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 468 ms
+[INFO] [2017-03-01 15:15:08][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2017-03-01 15:15:08][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Wed Mar 01 15:15:08 CST 2017]; root of context hierarchy
+[INFO] [2017-03-01 15:15:08][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO] [2017-03-01 15:15:08][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2017-03-01 15:15:08][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2017-03-01 15:15:09][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 610 ms
+[INFO] [2017-03-01 15:15:09][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2017-03-01 15:15:09][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Mar 01 15:15:09 CST 2017]; parent: Root WebApplicationContext
+[INFO] [2017-03-01 15:15:09][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2017-03-01 15:15:09][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2017-03-01 15:15:09][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/uuid.do]}" onto public java.lang.String org.school.manager.controller.HomeController.GetUUID()
+[INFO] [2017-03-01 15:15:09][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/login.do]}" onto public java.lang.String org.school.manager.controller.HomeController.Login()
+[INFO] [2017-03-01 15:15:09][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/]}" onto public java.lang.String org.school.manager.controller.HomeController.Index()
+[INFO] [2017-03-01 15:15:09][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/student/index.do]}" onto public java.lang.String org.school.manager.controller.StudentInformationManagerController.Student()
+[INFO] [2017-03-01 15:15:09][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Mar 01 15:15:09 CST 2017]; parent: Root WebApplicationContext
+[INFO] [2017-03-01 15:15:09][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Mar 01 15:15:09 CST 2017]; parent: Root WebApplicationContext
+[INFO] [2017-03-01 15:15:09][org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[INFO] [2017-03-01 15:15:09][org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[INFO] [2017-03-01 15:15:09][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 472 ms
+[INFO] [2017-03-01 19:02:17][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2017-03-01 19:02:17][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Wed Mar 01 19:02:17 CST 2017]; root of context hierarchy
+[INFO] [2017-03-01 19:02:17][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO] [2017-03-01 19:02:17][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2017-03-01 19:02:17][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2017-03-01 19:02:18][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 794 ms
+[INFO] [2017-03-01 19:02:18][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2017-03-01 19:02:18][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Mar 01 19:02:18 CST 2017]; parent: Root WebApplicationContext
+[INFO] [2017-03-01 19:02:18][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2017-03-01 19:02:18][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2017-03-01 19:02:18][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/login.do]}" onto public java.lang.String org.school.manager.controller.HomeController.Login()
+[INFO] [2017-03-01 19:02:18][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/uuid.do]}" onto public java.lang.String org.school.manager.controller.HomeController.GetUUID()
+[INFO] [2017-03-01 19:02:18][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/]}" onto public java.lang.String org.school.manager.controller.HomeController.Index()
+[INFO] [2017-03-01 19:02:18][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/student/index.do]}" onto public java.lang.String org.school.manager.controller.StudentInformationManagerController.Student()
+[INFO] [2017-03-01 19:02:18][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Mar 01 19:02:18 CST 2017]; parent: Root WebApplicationContext
+[INFO] [2017-03-01 19:02:18][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Mar 01 19:02:18 CST 2017]; parent: Root WebApplicationContext
+[INFO] [2017-03-01 19:02:18][org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[INFO] [2017-03-01 19:02:18][org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[INFO] [2017-03-01 19:02:18][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 638 ms

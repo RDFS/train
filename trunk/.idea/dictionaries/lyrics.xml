@@ -5,6 +5,8 @@
       <w>bbar</w>
       <w>checkboxmodel</w>
       <w>extjs</w>
+      <w>fieldcontainer</w>
+      <w>hbox</w>
       <w>introspector</w>
       <w>pagingtoolbar</w>
       <w>tbar</w>
