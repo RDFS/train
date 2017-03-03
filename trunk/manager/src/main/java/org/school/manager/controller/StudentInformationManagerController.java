@@ -11,6 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class StudentInformationManagerController {
     @RequestMapping("/index.do")
     public String Student() {
-        return "student";
+        return "student/index";
     }
 }

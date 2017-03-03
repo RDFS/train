@@ -25,10 +25,18 @@
         Ext.tip.QuickTipManager.init();
 
         function showContactForm() {
+            // 获取UUID
             Ext.Ajax.request({
                 url: "/uuid.do",
                 method: "GET",
                 success: function (response, options) {
+                    var sex = Ext.create("Ext.data.Store", {
+                        fields: ["id", "name"],
+                        data: [
+                            {"id": "0", "name": "男"},
+                            {"id": "1", "name": "女"},
+                        ]
+                    });
                     var json = Ext.JSON.decode(response.responseText);
                     if (!addWindow) {
                         form = Ext.widget('form', {
@@ -61,8 +69,7 @@
                                     fieldLabel: 'ID',
                                     allowBlank: false,
                                     readOnly: true
-                                },
-                                    {
+                                },{
                                         flex: 2,
                                         name: 'sName',
                                         afterLabelTextTpl: required,
@@ -85,7 +92,8 @@
                                         xtype: 'combobox',
                                         fieldLabel: '性别',
                                         queryMode: 'local',
-                                        displayField: 'nSex',
+                                        displayField: 'name',
+                                        store: sex,
                                         allowBlank: false
                                     }, {
                                         flex: 2,
@@ -96,16 +104,13 @@
                                         margins: '0 0 0 5',
                                         allowBlank: false
                                     }]
-                                }
-                                ,
-                                {
+                                }, {
                                     xtype: "fieldcontainer",
                                     layout: 'hbox',
 
                                     fieldDefaults: {
                                         labelAlign: 'top'
-                                    }
-                                    ,
+                                    },
                                     items: [{
                                         flex: 1,
                                         xtype: 'textfield',
@@ -128,24 +133,18 @@
                                         allowBlank: false,
                                         margins: '0 0 0 5'
                                     }]
-                                }
-                                ,
-                                {
+                                }, {
                                     xtype: 'combobox',
                                     fieldLabel: '班级',
                                     queryMode: 'local',
                                     displayField: 'nSchoolNo',
                                     allowBlank: false
-                                }
-                                ,
-                                {
+                                }, {
                                     xtype: 'textfield',
                                     fieldLabel: '电话',
                                     afterLabelTextTpl: required,
                                     allowBlank: false,
-                                }
-                                ,
-                                {
+                                }, {
                                     xtype: 'textareafield',
                                     fieldLabel: '备注',
                                     labelAlign: 'top',
@@ -173,8 +172,7 @@
                                     }
                                 }
                             }]
-                        })
-                        ;
+                        });
 
                         addWindow = Ext.widget('window', {
                             title: '编辑',
@@ -276,6 +274,11 @@
             }],
             bbar: {
                 xtype: "pagingtoolbar", store: store, displayInfo: true
+            },
+            listeners: {
+                itemdblclick: function (grid, row) {
+                    // 进入编辑模式
+                }
             }
         })
         ;
